@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noemi Oliveira Modas</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff9f7;
+  color: #39232d;
+}
+
+header {
+  background: #542638;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 7px;
+  color: #e5c28d;
+  margin-top: 5px;
+}
+
+nav {
+  background: #71364e;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background: #a76b81;
+}
+
+.hero {
+  min-height: 430px;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+  background: linear-gradient(135deg, #f5e1e7, #fff8f4);
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  color: #542638;
+  font-size: clamp(38px, 6vw, 60px);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #765563;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.botao {
+  display: inline-block;
+  background: #542638;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background: #8a4962;
+}
+
+.hero-icone {
+  font-size: 150px;
+  background: #ead0d9;
+  border: 8px solid white;
+  border-radius: 150px 150px 10px 10px;
+  padding: 25px;
+}
+
+section {
+  padding: 65px 20px;
+}
+
+.titulo {
+  text-align: center;
+  color: #542638;
+  font-family: Georgia, serif;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #826b75;
+  margin-bottom: 35px;
+}
+
+.catalogo {
+  background: #f8edf1;
+}
+
+.produtos {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.produto {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px #54263815;
+  transition: .3s;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+}
+
+.foto {
+  height: 210px;
+  background: linear-gradient(135deg, #f3dce4, #e4c2cf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 75px;
+}
+
+.info {
+  padding: 18px;
+}
+
+.info h3 {
+  color: #542638;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.info p {
+  color: #806d75;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.preco {
+  color: #542638;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.info .botao {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sobre {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.sobre p {
+  color: #765e68;
+  line-height: 1.9;
+  margin: 20px 0;
+}
+
+.contato {
+  background: #542638;
+  color: white;
+  text-align: center;
+}
+
+.contato .titulo {
+  color: white;
+}
+
+.contato p {
+  color: #f0dfe5;
+  margin-bottom: 25px;
+}
+
+.contato .botao {
+  background: #e5c28d;
+  color: #39232d;
+}
+
+footer {
+  background: #321521;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+@media (max-width: 800px) {
+  .produtos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .foto {
+    height: 170px;
+    font-size: 60px;
+  }
+
+  .info {
+    padding: 12px;
+  }
+
+  .info h3 {
+    font-size: 17px;
+  }
+
+  .info .botao {
+    padding: 11px 5px;
+    font-size: 11px;
+  }
+
+  .hero-icone {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 360px) {
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    NOEMI OLIVEIRA
+    <span>MODAS</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#catalogo">Catálogo</a>
+  <a href="#sobre">Sobre Nós</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <h1>Vista seu estilo!</h1>
+    <p>
+      Bem-vinda à Noemi Oliveira Modas!
+      Descubra roupas cheias de charme,
+      elegância e personalidade para
+      todos os momentos.
+    </p>
+    <a href="#catalogo" class="botao">
+      VER CATÁLOGO
+    </a>
+  </div>
+
+  <div class="hero-icone">👗</div>
+</section>
+
+<section id="catalogo" class="catalogo">
+  <h2 class="titulo">Nosso Catálogo</h2>
+  <p class="subtitulo">
+    Encontre seu próximo look favorito!
+  </p>
+
+  <div class="produtos">
+
+    <article class="produto">
+      <div class="foto">👗</div>
+      <div class="info">
+        <h3>Vestido Floral</h3>
+        <p>Delicado e elegante para diversas ocasiões.</p>
+        <div class="preco">R$ 89,90</div>
+        <a class="botao pedido"
+           href="#contato"
+           data-produto="Vestido Floral">
+          TENHO INTERESSE
+        </a>
+      </div>
+    </article>
+
+    <article class="produto">
+      <div class="foto">👚</div>
+      <div class="info">
+        <h3>Blusa Elegante</h3>
+        <p>Uma peça versátil para montar seu look.</p>
+        <div class="preco">R$ 49,90</div>
+        <a class="botao pedido"
+           href="#contato"
+           data-produto="Blusa Elegante">
+          TENHO INTERESSE
+        </a>
+      </div>
+    </article>
+
+    <article class="produto">
+      <div class="foto">👖</div>
+      <div class="info">
+        <h3>Calça Jeans</h3>
+        <p>Um clássico para combinar com tudo.</p>
+        <div class="preco">R$ 99,90</div>
+        <a class="botao pedido"
+           href="#contato"
+           data-produto="Calça Jeans">
+          TENHO INTERESSE
+        </a>
+      </div>
+    </article>
+
+    <article class="produto">
+      <div class="foto">✨</div>
+      <div class="info">
+        <h3>Conjunto Moderno</h3>
+        <p>Praticidade e estilo em uma combinação.</p>
+        <div class="preco">R$ 119,90</div>
+        <a class="botao pedido"
+           href="#contato"
+           data-produto="Conjunto Moderno">
+          TENHO INTERESSE
+        </a>
+      </div>
+    </article>
+
+    <article class="produto">
+      <div class="foto">👗</div>
+      <div class="info">
+        <h3>Vestido Clássico</h3>
+        <p>Elegância para momentos especiais.</p>
+        <div class="preco">R$ 109,90</div>
+        <a class="botao pedido"
+           href="#contato"
+           data-produto="Vestido Clássico">
+          TENHO INTERESSE
+        </a>
+      </div>
+    </article>
+
+    <article class="produto">
+      <div class="foto">👚</div>
+      <div class="info">
+        <h3>Blusa Casual</h3>
+        <p>Conforto para o dia a dia.</p>
+        <div class="preco">R$ 39,90</div>
+        <a class="botao pedido"
+           href="#contato"
+           data-produto="Blusa Casual">
+          TENHO INTERESSE
+        </a>
+      </div>
+    </article>
+
+    <article class="produto">
+      <div class="foto">👖</div>
+      <div class="info">
+        <h3>Calça Pantalona</h3>
+        <p>Um visual moderno e cheio de personalidade.</p>
+        <div class="preco">R$ 89,90</div>
+        <a class="botao pedido"
+           href="#contato"
+           data-produto="Calça Pantalona">
+          TENHO INTERESSE
+        </a>
+      </div>
+    </article>
+
+    <article class="produto">
+      <div class="foto">💗</div>
+      <div class="info">
+        <h3>Conjunto Casual</h3>
+        <p>Uma combinação prática e charmosa.</p>
+        <div class="preco">R$ 129,90</div>
+        <a class="botao pedido"
+           href="#contato"
+           data-produto="Conjunto Casual">
+          TENHO INTERESSE
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="subtitulo" style="margin-top:25px;font-size:12px">
+    Produtos e preços ilustrativos. Atualize conforme o estoque da loja.
+  </p>
+</section>
+
+<section id="sobre">
+  <div class="sobre">
+    <h2 class="titulo">Sobre a loja</h2>
+    <p>
+      A Noemi Oliveira Modas acredita que cada pessoa
+      tem um estilo único. Nosso objetivo é trazer
+      inspiração, beleza e elegância para suas escolhas.
+    </p>
+    <p>
+      Gostou de alguma peça? Entre em contato para
+      consultar tamanhos, cores, valores e disponibilidade.
+    </p>
+    <a href="#contato" class="botao">FALE CONOSCO</a>
+  </div>
+</section>
+
+<section id="contato" class="contato">
+  <h2 class="titulo">Entre em contato</h2>
+  <p>
+    Gostou de alguma roupa? Fale com a gente
+    e consulte as peças disponíveis!
+  </p>
+
+  <a href="#" id="whatsapp" class="botao">
+    FALAR PELO WHATSAPP
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>NOEMI OLIVEIRA MODAS</strong></p>
+  <p>Moda, charme e elegância para você ♡</p>
+  <p>© <span id="ano"></span> Todos os direitos reservados.</p>
+</footer>
+
+<script>
+// COLOQUE O WHATSAPP DA LOJA AQUI.
+// Formato: 55 + DDD + número, sem espaços.
+// Exemplo fictício: 5541999999999
+const telefone = "55DDNUMEROAQUI";
+
+function abrirWhatsApp(mensagem) {
+  if (!/^55\d{10,11}$/.test(telefone)) {
+    alert("Configure o número do WhatsApp no código antes de usar.");
+    return;
+  }
+
+  const link = "https://wa.me/" + telefone +
+    "?text=" + encodeURIComponent(mensagem);
+
+  window.open(link, "_blank", "noopener,noreferrer");
+}
+
+document.querySelectorAll(".pedido").forEach(botao => {
+  botao.addEventListener("click", function(evento) {
+    evento.preventDefault();
+
+    abrirWhatsApp(
+      "Olá! Vim pelo site da Noemi Oliveira Modas e tenho interesse em " +
+      this.dataset.produto +
+      ". Poderia me informar os tamanhos e a disponibilidade?"
+    );
+  });
+});
+
+document.getElementById("whatsapp").addEventListener("click", function(evento) {
+  evento.preventDefault();
+
+  abrirWhatsApp(
+    "Olá! Vim pelo site da Noemi Oliveira Modas e gostaria de conhecer as roupas disponíveis."
+  );
+});
+
+document.getElementById("ano").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
